@@ -2,7 +2,7 @@
 
 这是对Stack Overflow上投票最高的带`javascript`标签的问题的汇总。
 
-做JavaScript项目大半年了，最近想整理一下JavaScript的东西，但没想到一个好的组织方式。像《JavaScript指南》这种，太全，我还没达到那种覆盖面；《JavaScript精粹》这种，太深，我也没达到这种提炼度。我是情况是：看过了那些书，加上项目实践经验的总结。对于一些问题有自己的眼光和体会，但又不那么成体系。
+最近想整理一下JavaScript的东西，但没想到一个好的组织方式。像《JavaScript指南》这种，太全，我还没达到那种覆盖面；《JavaScript精粹》这种，太深，我也没达到这种提炼度。我是情况是：看过了那些书，加上项目实践经验的总结。对于一些问题有自己的眼光和体会，但还没那么成体系。
 
 于是乎，干脆就凌乱中总结，凌乱中学习。决定把Stackoverflow上`javascript`标签中的投票最高的问题逐个分析。
 
@@ -15,8 +15,9 @@
 
 不是简单的翻译。而是把它们作为素材，一方面是学习问题和答案中提到的新知识，一方面是发现一些我自己觉得需要注意的点，提出来作为已学到的JavaScript的整理。
 
-[Highest Voted `javascript` Questions - Stack Overflow](http://stackoverflow.com/questions/tagged/javascript?sort=votes)
+[Highest Voted Javascript Questions - Stack Overflow](http://stackoverflow.com/questions/tagged/javascript?sort=votes)
 
 - [JavaScript中的闭包是如何工作的？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/how-do-javascript-closures-work.md) *（[How do JavaScript closures work?](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work)）*
+- [什么是JavaScript严格模式？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/what-is-use-strict-in-javascript.md) *（[What does “use strict” do in JavaScript?](http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it)）*
 
-*（未完待续）*
+*...未完待续*
