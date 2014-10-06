@@ -54,24 +54,25 @@ abc(); // works. we can call it again
 - 都可以被重新指向。比如：`functionOne = functionTwo; functionTwo = null;`
 
 ##总结
-其实对这两类函数定义方式，我看不出很明显的应用场景的差别。只是从实践经验来看，使用**functionOne**的方式更便利。  
-而functionTwo的问题主要是：它出生得太早了！而这也是由**hoist**造成的。sigh...
+其实对这两类函数定义方式，我看不出很明显的应用场景的差别。  
+只是从实践经验来看，使用**自执行函数**或者**模块化JavaScript**的方式下：
 
-举个例子：
+- 使用functionOne定义公开成员
+- 使用functionTwo定义私有方法
+
+这部分内容写到这里就差不多了。但我对hoist还是有些疑问。举个例子：
 ```
 var foo = 1;
 function bar() {
   if (!foo) {
     var foo = 10 }
   return foo; }
-bar(); // 10
+bar(); // 输出10
 ```
-`foo`被hoisted，初始化为`undefined`。所以`!foo`为真，然后执行`foo = 10;`。等于说第一行定义的`var foo = 1;`压根没起到任何作用——因为`function bar(){}`出生得太早了！
+`foo`被hoisted，初始化为`undefined`。所以`!foo`为真，然后执行`foo = 10;`。等于说第一行定义的`var foo = 1;`压根没起到任何作用。
 
-所以为了保持变量和函数的初始化一致，所写即所得，使用functionOne来定义函数比较便利和直观。
-
-那么问题来了，我们为什么需要**hoist**？
-*(难道是因为当初为了增加JavaScript的灵活性，不用拘泥于**先定义后使用**，而弄出一个hoist)*
+好，那么问题来了，我们为什么需要**hoist**？
+*(难道是因为当初为了增加JavaScript的灵活性，不用拘泥于__先定义后使用__，而弄出一个hoist?)*
 
 
 
