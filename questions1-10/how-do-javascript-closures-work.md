@@ -1,3 +1,5 @@
+原问题：[How do JavaScript closures work?](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
+
 > If you can't explain it to a six-year old, you really don't understand it yourself.  
 *-- Albert Einstein*
 

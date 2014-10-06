@@ -1,3 +1,5 @@
+原问题：[What does “use strict” do in JavaScript?](http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it)
+
 > Strict Mode是ECMAScript5引入的一个新特性。使用它能使得你的程序或者函数运行在**严格**的环境中。这个严格的运行环境能预防一些危险操作，并会给出异常信息。  
 - 捕获一些常见的编程陷阱
 - 阻止一些危险操作的发生（比如存取全局对象）

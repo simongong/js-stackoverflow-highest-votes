@@ -17,7 +17,9 @@
 
 [Highest Voted Javascript Questions - Stack Overflow](http://stackoverflow.com/questions/tagged/javascript?sort=votes)
 
-- [JavaScript中的闭包是如何工作的？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-do-javascript-closures-work.md) *（[How do JavaScript closures work?](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work)）*
-- [什么是JavaScript严格模式？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/what-is-use-strict-in-javascript.md) *（[What does “use strict” do in JavaScript?](http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it)）*
+- [JavaScript中的闭包是如何工作的？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-do-javascript-closures-work.md)
+- [什么是JavaScript严格模式？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/what-is-use-strict-in-javascript.md)
+- [如何定义一个JavaScript函数？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-define-a-function-in-javascript.md)
+
 
 *...未完待续*
