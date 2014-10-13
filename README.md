@@ -15,6 +15,7 @@
 于是我把它们放到了github上。
 
 挑选这些问题的标准有两个：
+
 1. 这个问题是我以前有过的或者一直想问的
 2. 如果别人问我这个问题，我会觉得这个问题出发点不错。但却一时答不出来，得想一会儿、查资料才能回答上
 
@@ -30,7 +31,7 @@
 6. 如何移除一个对象的某个属性 [Source](http://stackoverflow.com/questions/208105/how-to-remove-a-property-from-a-javascript-object)
 7. `event.preventDefault()` VS `return false` [Source](http://stackoverflow.com/questions/1357118/event-preventdefault-vs-return-false)
 8. 如何开始Node.js的学习 [Source](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js)
-9. Node.js适用于哪些场景 [Source](http://stackoverflow.com/questions/5062614/how-to-decide-when-to-use-node-js)
+9. [Node.js适用于哪些场景](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/when-to-use-nodejs.md)
 10. 如何用JavaScript生成一个GUID/UUID [Source](http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript)
 
 *...未完待续*
