@@ -32,6 +32,6 @@
 7. `event.preventDefault()` VS `return false` [Source](http://stackoverflow.com/questions/1357118/event-preventdefault-vs-return-false)
 8. 如何开始Node.js的学习 [Source](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js)
 9. [Node.js适用于哪些场景](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/when-to-use-nodejs.md)
-10. 如何用JavaScript生成一个GUID/UUID [Source](http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript)
+10. [如何用JavaScript生成一个GUID/UUID](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-create-a-UUID-in-javascript.md)
 
 *...未完待续*
