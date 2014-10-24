@@ -21,17 +21,25 @@
 
 不是简单的翻译。而是把它们作为素材，一方面是发现我以前遗漏的问题和学习其中涉及的新知识，另一方面是总结一些我自己觉得需要注意的点，作为已学到的JavaScript的整理。
 
-[Highest Voted Javascript Questions - Stack Overflow](http://stackoverflow.com/questions/tagged/javascript?sort=votes)
+[Highest Voted Javascript Questions - Stack Overflow](http://stackoverflow.com/questions/tagged/javascript?sort=votes) *（需登录Stack Overflow后查看）*
 
 1. [JavaScript中的闭包是如何工作的？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-do-javascript-closures-work.md)
 2. [什么是JavaScript严格模式？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/what-is-use-strict-in-javascript.md)
 3. [如何定义一个JavaScript函数？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-define-a-function-in-javascript.md)
-4. 如何克隆Clone一个JavaScript对象 [Source](http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-an-object)
+4. 如何克隆Clone一个JavaScript对象 [Source1](http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-an-object) [Source2](http://stackoverflow.com/questions/728360/most-elegant-way-to-clone-a-javascript-object)
 5. 为什么有些API在返回的JSON数据头部加一个`while(1);` [Source](http://stackoverflow.com/questions/2669690/why-does-google-prepend-while1-to-their-json-responses)
 6. 如何移除一个对象的某个属性 [Source](http://stackoverflow.com/questions/208105/how-to-remove-a-property-from-a-javascript-object)
 7. `event.preventDefault()` VS `return false` [Source](http://stackoverflow.com/questions/1357118/event-preventdefault-vs-return-false)
 8. 如何开始Node.js的学习 [Source](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js)
 9. [Node.js适用于哪些场景](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/when-to-use-nodejs.md)
 10. [如何用JavaScript生成一个GUID/UUID](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-create-a-UUID-in-javascript.md)
+11. JavaScript的.prototype是如何工作的 [Source](http://stackoverflow.com/questions/572897/how-does-javascript-prototype-work)
+12. JavaScript的**new**关键字 [Source](http://stackoverflow.com/questions/1646698/what-is-the-new-keyword-in-javascript)
+13. JavaScript的**var**关键字 [Source](http://stackoverflow.com/questions/1470488/what-is-the-function-of-the-var-keyword-and-when-to-use-it-or-omit-it)
+14. Facebook是如何禁用浏览器的Developer Tools的 [Source](http://stackoverflow.com/questions/21692646/how-does-facebook-disable-the-browsers-integrated-developer-tools)
+15. 什么是JSONP [Source](http://stackoverflow.com/questions/2067472/what-is-jsonp-all-about)
+16. 如何清空一个JavaScript数组 [Source](http://stackoverflow.com/questions/1232040/how-to-empty-an-array-in-javascript)
+17. 如何遍历一个JavaScript数组 [Source](http://stackoverflow.com/questions/3010840/loop-through-array-in-javascript)
+18. JavaScript中的TDD和单元测试工具 [Source](http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd)
 
 *...未完待续*
