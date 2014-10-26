@@ -1,4 +1,7 @@
-JSONP出现的场合，一般都有AJAX和JSON，它的出生晚于AJAX。
+原问题：[What is JSONP all about?](http://stackoverflow.com/questions/2067472/what-is-jsonp-all-about)
+
+
+JSONP出现的场合，一般都有AJAX和JSON。
 
 尽管多种名词术语混杂，我们从这几个问题来看JSONP：
 
