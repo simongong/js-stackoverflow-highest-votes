@@ -28,15 +28,13 @@ Var variables are created when their containing Lexical Environment is instantia
 
 打开一个页面，调用一个函数，都会创建一个新的执行上下文。
 
-一个运行上下文包含以下组件：
+一个执行上下文包含以下组件：
 
 * Code evaluation state
 * Function - 当前的上下文是否追踪的是一个函数的执行，否则为`null`
 * Realm
 * LexicalEnvironment - 词法环境，解析该上下文中的标识符
 * VariableEnvironment - 标识该上下文中由*VariableStatements*创建的变量
-
-JavaScript引擎维护一个*execution context stack*，当前的*running execution context*始终处于这个栈的顶端。
 
 ###VariableEnvironment
 初始创建执行上下文的时候，`LexicalEnvironment`和`VariableEnvironment`的值是一样的。在代码被执行的过程中，VariableEnvironment始终不变，而LexicalEnvironment会改变。
@@ -48,6 +46,8 @@ VariableEnvironment包含以下两部分：
   * closure variant
 * 内部`var`定义的变量
 
+JavaScript引擎维护一个*execution context stack*，当前的*running execution context*始终处于这个栈的顶端。
+
 因此，*Variable Scope*就是指当前的*running execution context*中的*VariableEnvironment*。
 
 ##With Statement
@@ -58,14 +58,14 @@ with (window) {
 }
 ```
 
-我考证了下，没找到根据。不过根据实际经验，这个是成立的。如果这个是真的，那么上面的总结中，第二条和第三条都是成立的。
+我考证了下，没找到根据。不过根据实际经验，这个是成立的。由此第二条和第三条都是成立的。
 
 因为根据[ECMAScript中对`With`的定义](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-with-statement)：
 > The with statement adds an object environment record for a computed object to the lexical environment of the running execution context. It then executes a statement using this augmented lexical environment. Finally, it restores the original lexical environment.
 
 所以，`window`就成了浏览器中JavaScript代码的*original lexical environment*，也就是*VariableEnvironment*
 
-##定位变量
+##变量解析
 当JavaScript引擎解析到一个语句里的`a`变量时，如何确定它的值呢？
 
 答案就是在*VariableEnvironment*中查找。
@@ -73,7 +73,7 @@ with (window) {
 根据前面总结的第四条：
 > `a`被使用时，JavaScript解释器会**由小到大**的范围内寻找最近的`a`的定义，寻找失败则当`a`是一个值为`undefined`的global variant。
 
-因此：**VariableEnvironment中保存的变量及其运行时的值，是带scope的**。
+也就是说，**VariableEnvironment中的变量及其运行时的值，是带scope的**。
 
 来看一个例子：
 ```
