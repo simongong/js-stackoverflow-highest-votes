@@ -82,8 +82,6 @@ assert( ninjaB.swingSword(), "and on all instantiated objects." );
 ```
 
 ##后记
-在本文章中，如果你够细致，会发现还遗留了这几个问题：
+在本文章中，还遗留了这两个问题：
 * JavaScript Object到底是怎样一个结构
 * 创建一个JavaScript对象一定要用`new`关键字吗
-
-由于这几个问题会单独开一个主题写，因此在那部分完成之后，我再链接过来。

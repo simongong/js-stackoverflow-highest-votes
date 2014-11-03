@@ -33,13 +33,13 @@
 8. 如何开始Node.js的学习 [Source](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js)
 9. [Node.js适用于哪些场景](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/when-to-use-nodejs.md)
 10. [如何用JavaScript生成一个GUID/UUID](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-create-a-UUID-in-javascript.md)
-11. JavaScript的.prototype是如何工作的 [Source](http://stackoverflow.com/questions/572897/how-does-javascript-prototype-work)
+11. [JavaScript的.prototype是如何工作的](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/how-javascript-prototype-works.md)
 12. JavaScript的**new**关键字 [Source](http://stackoverflow.com/questions/1646698/what-is-the-new-keyword-in-javascript)
-13. JavaScript的**var**关键字 [Source](http://stackoverflow.com/questions/1470488/what-is-the-function-of-the-var-keyword-and-when-to-use-it-or-omit-it)
-14. Facebook是如何禁用浏览器的Developer Tools的 [Source](http://stackoverflow.com/questions/21692646/how-does-facebook-disable-the-browsers-integrated-developer-tools)
+13. [JavaScript的**var**关键字](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/keywork-var-in-javascript.md)
+14. [Facebook是如何禁用浏览器的Developer Tools的](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/how-facebook-disables-chrome-console.md)
 15. [什么是JSONP](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/jsonp.md)
-16. 如何清空一个JavaScript数组 [Source](http://stackoverflow.com/questions/1232040/how-to-empty-an-array-in-javascript)
-17. 如何遍历一个JavaScript数组 [Source](http://stackoverflow.com/questions/3010840/loop-through-array-in-javascript)
+16. [如何清空一个JavaScript数组](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/clear-an-array-in-javascript.md)
+17. [如何遍历一个JavaScript数组](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/loop-an-array-in-javascript.md)
 18. JavaScript中的TDD和单元测试工具 [Source](http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd)
 
 *...未完待续*
