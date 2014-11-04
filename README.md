@@ -27,7 +27,7 @@
 2. [什么是JavaScript严格模式？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/what-is-use-strict-in-javascript.md)
 3. [如何定义一个JavaScript函数？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-define-a-function-in-javascript.md)
 4. 如何克隆Clone一个JavaScript对象 [Source1](http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-an-object) [Source2](http://stackoverflow.com/questions/728360/most-elegant-way-to-clone-a-javascript-object)
-5. 为什么有些API在返回的JSON数据头部加一个`while(1);` [Source](http://stackoverflow.com/questions/2669690/why-does-google-prepend-while1-to-their-json-responses)
+5. [为什么有些API在返回的JSON数据头部加一个`while(1);`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/why-prepend-while1-to-JSON-response.md)
 6. [如何移除一个对象的某个属性](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/remove-property-from-javascript-object.md)
 7. `event.preventDefault()` VS `return false` [Source](http://stackoverflow.com/questions/1357118/event-preventdefault-vs-return-false)
 8. 如何开始Node.js的学习 [Source](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js)

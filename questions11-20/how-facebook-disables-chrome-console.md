@@ -1,6 +1,13 @@
 原问题：[How does Facebook disable the browser's integrated Developer Tools?](http://stackoverflow.com/questions/21692646/how-does-facebook-disable-the-browsers-integrated-developer-tools)
 
-提问者用Chome打开Facebook时，发现Developer Tools里的Console被禁用了。他很好奇是怎么做到的。
+提问者用Chome打开Facebook时，发现Developer Tools里的Console被禁用了。
+![chrome-dev-tools-at-facebook-page](http://i.stack.imgur.com/Wiatp.png)
+
+甚至连Chrome console的自动提示功能都失效了。
+
+![chrome-dev-console-auto-complete-disabled](http://i.stack.imgur.com/j0Zmx.png)
+
+他很好奇是怎么做到的。
 
 现在排名第一的答案，正是来自于当时做这件事的Facebook工程师。我们可以从他的回答中了解到一些原委。
 
