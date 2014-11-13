@@ -29,7 +29,7 @@
 4. 如何克隆Clone一个JavaScript对象 [Source1](http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-an-object) [Source2](http://stackoverflow.com/questions/728360/most-elegant-way-to-clone-a-javascript-object)
 5. [为什么有些API在返回的JSON数据头部加一个`while(1);`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/why-prepend-while1-to-JSON-response.md)
 6. [如何移除一个对象的某个属性](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/remove-property-from-javascript-object.md)
-7. `event.preventDefault()` VS `return false` [Source](http://stackoverflow.com/questions/1357118/event-preventdefault-vs-return-false)
+7. [`event.preventDefault()` VS `return false`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-surpress-an-event-in-javascript.md)
 8. 如何开始Node.js的学习 [Source](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js)
 9. [Node.js适用于哪些场景](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/when-to-use-nodejs.md)
 10. [如何用JavaScript生成一个GUID/UUID](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-create-a-UUID-in-javascript.md)

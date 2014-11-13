@@ -24,25 +24,15 @@ $('a').click(function () {
 * `event.stopPropagation()`
 * `event.stopImmediatePropagation()`
 
-这四种方式在本质上是阻止事件执行，因此我把这篇文章的链接设置为：
+这四种方式在**某种情况下**都能阻止事件执行，因此我把这篇文章的链接设置为：
 
 #How to surpress an event in javascript?
 
-这个问题不限于jQuery，我自己在前端开发中也为这个问题困扰很久了。
+这个问题不限于jQuery，我自己在前端开发中也被这个问题困扰过。
 
-这个问题的根源是**Event**。要解答这个问题，需要弄清楚三个东西：DOM, DOM Event, jQuery Event. 在弄清楚Event的来龙去脉之后，你才会知道这四种操作究竟是干了些啥。
+这个问题的根源是**Event**。要解答这个问题，需要弄清楚三个东西：DOM, DOM Event, jQuery Event。 在弄清楚Event的来龙去脉之后，你才会知道这四种操作究竟是干了些啥。
 
-其他参考：
-
-* http://cross-browser.com/talk/event_interface_soup.php
-* http://blog.niftysnippets.org/2011/11/story-on-return-false.html
-* http://fuelyourcoding.com/jquery-events-stop-misusing-return-false/
-* Event _[Doc](https://developer.mozilla.org/en-US/docs/Web/API/Event)_
-  * Register Event Listner
-  * Event Interface
-  * Event Reference _[Doc](https://developer.mozilla.org/en-US/docs/Web/Events)_
-
-Table of Contents:
+**Table of Contents:**
 
 * DOM
   * DOM Level 1
@@ -63,24 +53,27 @@ Table of Contents:
 DOM是指[Document Object Model](http://www.w3.org/DOM/DOMTR)，其中：
 
 * Document是指XML/HTML文档
-* Object是指是把文档封装为一个树形结构的对象，并对外暴露一些对象方法
+* Object是指把文档封装为一个树形结构的对象，并对外暴露一些对象方法
 * Model是指对该树形结构对象的各个子节点都封装为一个模型，并对外暴露一些模型的属性和方法
 
-简单的说，DOM就是对XML/HTML进行封装，然后暴露API。这个API涉及两类实体：
+简单的说，DOM就是对XML/HTML进行封装，然后暴露API。有两类实体会使用到这些API：
 
-* 浏览器。
+* DOM实现者（比如浏览器）
   * 根据DOM来展示一个HTML字符串
   * 接收用户操作，触发对应事件
 * 程序员。
   * 通过DOM API监听用户动作（事件）
   * 调用DOM API操作DOM
 
-DOM规范是由W3C制定的。尽管DOM通常会使用JavaScript来访问， 但它并不是JavaScript的一部分，它也可以被其他语言使用。
+> DOM规范是由W3C制定的。尽管DOM通常会使用JavaScript来访问， 但它并不是JavaScript的一部分，它也可以被其他语言使用。
 
-根据这个树形结构的层次，DOM规范中包含Level 1, Level 2, Level 3三个级别。
+DOM随着年代一直在发展改进，DOM规范中依次经历过Level 1, Level 2, Level 3三个阶段。
 
 ### DOM Level 1
-DOM核心, 提供了一种方式，对基于XML的文档结构的映射，使得文档任何部分的访问和操作都变得很方便； DOM HTML，通过添加HTML专用的对象和方法对DOM核心进行扩展。
+包含两部分：
+
+* DOM Core, 提供了一种方式，对基于XML的文档结构的映射，使得文档任何部分的访问和操作都变得很方便。
+* DOM HTML，通过添加HTML专用的对象和方法对DOM核心进行扩展。
 
 ### DOM Level 2
 DOM Level 2 引入了几种DOM的新方法来处理新类型的接口：
@@ -103,7 +96,7 @@ DOM Level 3 进一步对DOM进行了扩展，引入了使用统一方式加载�
 本部分参考：[JavaScript Vs DOM Vs BOM, relationship explained](http://vkanakaraj.wordpress.com/2009/12/18/javascript-vs-dom-vs-bom-relationship-explained/)
 
 ## DOM Event
-DOM Event的规范一直在发展中，现在人们提到DOM Event，通常指的是[DOM Level 3 Events](http://www.w3.org/TR/DOM-Level-3-Events/)。它包含两大部分：
+现在人们提到DOM Event，通常指的是[DOM Level 3 Events](http://www.w3.org/TR/DOM-Level-3-Events/)。它包含两大部分：
 
 * DOM Event Architecture
 * Event Types
@@ -139,7 +132,7 @@ targetElem.onclick = null;  // Remove a DOM Level 0 Event
 * The first goal is the design of a generic event system which allows registration of event handlers, describes event flow through a tree structure, and provides basic contextual information for each event.
 * The second goal of the event model is to provide a common subset of the current event systems used in DOM Level 0 browsers.
 
-DOM Level 2 Event首先是面向DOM提供Event接口，负责DOM事件句柄的注册、事件流的描述和事件上下文的定义。其次是面向浏览器，提供与浏览器的交互能力。其中比较重要的就是我们常用的用于处理注册和删除事件处理程序的操作：addEventListener()和removeEventListener()。
+DOM Level 2 Event首先是面向DOM提供Event接口，负责DOM事件句柄的注册、事件流的描述和事件上下文的定义。其次是面向浏览器，提供与浏览器的交互能力。其中比较重要的就是我们常用的用于处理注册和删除事件处理程序的操作：`addEventListener() && removeEventListener()`。
 
 他们的[IDL定义](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-registration)如下：
 ```
@@ -217,16 +210,17 @@ DOM Event Model中最重要的就是[事件流](http://www.w3.org/TR/DOM-Level-2
 假设Event Capture和Event Bubbling都有效，整个事件流的处理分为三个阶段：[capture phase](http://www.w3.org/TR/DOM-Level-3-Events/#capture-phase), [target phase](http://www.w3.org/TR/DOM-Level-3-Events/#target-phase)和[bubble phase](http://www.w3.org/TR/DOM-Level-3-Events/#bubble-phase)。
 
 如下图所示（来自[DOM Event Architecture](http://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture)）：
+
 ![dom-event-flow](https://farm8.staticflickr.com/7543/15593158310_00fd385447.jpg)
 
 ## Surpress an Event
-这里指的是终止事件流的执行。
+这里指的是终止事件流的执行。本来通过DOM定义的接口就能实现，但现在jQuery太流行，而它又对DOM接口进行了封装，动作稍微不太一样。因此这里分两种JavaScript环境来介绍如果终止一个事件流。
 
 ### by DOM
 下面我就来看看本文最开始提到的四种方案：
 
 * `return false;`
-  * 无效语句，详情见下面的说明。
+  * 无效语句，详情见下面的说明。（Level 0 Event中有效，不过不规范，忽略）
 * `event.preventDefault()` - **Event Context**
   * 是一个Level 2 Events事件，定义在[Level 2 Events-Event](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event)
   * 每个DOM Event都有一个默认的处理程序，通常是在注册的处理程序结束之后执行
@@ -243,7 +237,7 @@ DOM Event Model中最重要的就是[事件流](http://www.w3.org/TR/DOM-Level-2
   * 它是由Level 3 Events新添加入Event接口的方法
   * Immediate Propagation是指在事件流的某个阶段中
   * 比如target phase中，注册了多个处理程序，它们按某种顺序执行
-  * 如果其中一个处理程序调用了`event.stopImmediatePropagation()`，那么该phase中后续的处理程序将被忽略
+  * 如果其中一个处理程序调用了`event.stopImmediatePropagation()`，那么该phase中后续注册的处理程序将被忽略
   * Spec中没有具体定义该方法的动作，[MDN - Event API](https://developer.mozilla.org/en-US/docs/Web/API/Event.stopImmediatePropagation)中定义了
 
 其中后面三种，是DOM的[Basic Event Interfaces](http://www.w3.org/TR/DOM-Level-3-Events/#event-interfaces)，他们肯定被DOM实现者支持。
