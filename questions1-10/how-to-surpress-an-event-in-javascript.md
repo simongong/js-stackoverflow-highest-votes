@@ -28,17 +28,13 @@ $('a').click(function () {
 
 #How to surpress an event in javascript?
 
-这个问题不限于jQuery，我自己在前端开发中也被这个问题困扰过。
+这个问题不限于jQuery，我自己在前端开发中也被它困扰过。
 
-这个问题的根源是**Event**。要解答这个问题，需要弄清楚三个东西：DOM, DOM Event, jQuery Event。 在弄清楚Event的来龙去脉之后，你才会知道这四种操作究竟是干了些啥。
+问题的根源是**Event**。要解答这个问题，需要弄清楚三个东西：DOM, DOM Event, jQuery Event。 了解这个Event的来龙去脉之后，你才会知道这四种操作究竟是干了些啥。
 
-**Table of Contents:**
+## 正文目录
 
 * DOM
-  * DOM Level 1
-  * DOM Level 2
-  * DOM Level 3
-  * 其他DOM
 * DOM Event
   * DOM Level 0 Event
   * Flexible Event Model
@@ -61,7 +57,7 @@ DOM是指[Document Object Model](http://www.w3.org/DOM/DOMTR)，其中：
 * DOM实现者（比如浏览器）
   * 根据DOM来展示一个HTML字符串
   * 接收用户操作，触发对应事件
-* 程序员。
+* 程序员
   * 通过DOM API监听用户动作（事件）
   * 调用DOM API操作DOM
 
@@ -69,31 +65,23 @@ DOM是指[Document Object Model](http://www.w3.org/DOM/DOMTR)，其中：
 
 DOM随着年代一直在发展改进，DOM规范中依次经历过Level 1, Level 2, Level 3三个阶段。
 
-### DOM Level 1
-包含两部分：
+* DOM Level 1
+  * DOM Core, 提供了一种方式，对基于XML的文档结构的映射，使得文档任何部分的访问和操作都变得很方便。
+  * DOM HTML，通过添加HTML专用的对象和方法对DOM核心进行扩展。
+* DOM Level 2
+  * DOM Views — 描述了跟踪文档的各种视图的接口（就是说，CSS样式之前和之后的文档）
+  * DOM Events — 描述了事件接口
+  * DOM Style — 描述了处理基于CSS的样式的接口
+  * DOM Traversal and Range — 描述了遍历和操作一棵文档树的接口
+* DOM Level 3
+  * 引入了使用统一方式加载和保存文档的方法（包含在一个叫做DOM Load and Save的新模块中）。
+  * DOM核心被扩展以支持XML 1.0的所有部分，包括XML Infoset, XPath和XML Base。
+* 其他DOM
+  * Scalable Vector Graphics (SVG)
+  * Mathematical Markup Language (MathML)
+  * Synchronized Multimedia Integration Language (SMIL)
 
-* DOM Core, 提供了一种方式，对基于XML的文档结构的映射，使得文档任何部分的访问和操作都变得很方便。
-* DOM HTML，通过添加HTML专用的对象和方法对DOM核心进行扩展。
-
-### DOM Level 2
-DOM Level 2 引入了几种DOM的新方法来处理新类型的接口：
-
-* DOM Views — 描述了跟踪文档的各种视图的接口（就是说，CSS样式之前和之后的文档）
-* DOM Events — 描述了事件接口
-* DOM Style — 描述了处理基于CSS的样式的接口
-* DOM Traversal and Range — 描述了遍历和操作一棵文档树的接口
-
-### DOM Level 3
-DOM Level 3 进一步对DOM进行了扩展，引入了使用统一方式加载和保存文档的方法（包含在一个叫做DOM Load and Save的新模块中）。
-
-在Level 3，DOM核心被扩展以支持XML 1.0的所有部分，包括XML Infoset, XPath和XML Base。
-
-### 其他DOM
-* Scalable Vector Graphics (SVG)
-* Mathematical Markup Language (MathML)
-* Synchronized Multimedia Integration Language (SMIL)
-
-本部分参考：[JavaScript Vs DOM Vs BOM, relationship explained](http://vkanakaraj.wordpress.com/2009/12/18/javascript-vs-dom-vs-bom-relationship-explained/)
+本部分内容参考：[JavaScript Vs DOM Vs BOM, relationship explained](http://vkanakaraj.wordpress.com/2009/12/18/javascript-vs-dom-vs-bom-relationship-explained/)
 
 ## DOM Event
 现在人们提到DOM Event，通常指的是[DOM Level 3 Events](http://www.w3.org/TR/DOM-Level-3-Events/)。它包含两大部分：
@@ -101,12 +89,12 @@ DOM Level 3 进一步对DOM进行了扩展，引入了使用统一方式加载�
 * DOM Event Architecture
 * Event Types
 
-DOM Event Architecture中最重要的就是Event Flow，接下来会介绍。Event Types定义了事件类型的集合，具体请查看标准文档，这里不涉及。
+DOM Event Architecture中最重要的就是Event Flow，接下来会详细介绍。Event Types定义了事件类型的集合，具体请查看标准文档，这里不涉及。
 
 ### DOM Level 0 Event
-[DOM Level 0 Event](http://en.wikipedia.org/wiki/DOM_events#DOM_Level_0)很古老，产生于DOM Level 2 Event Model概念之前，是由浏览器提供的JavaScript接口支持的，没有统一规范。实际上，**Level 0 Event**这个名字也不是正式的，只是依照后来的命名规范取的一个名字，你可以忽略这个名字。
+[DOM Level 0 Event](http://en.wikipedia.org/wiki/DOM_events#DOM_Level_0)很古老，产生于DOM Level 2 Event Model概念之前，是由浏览器提供的JavaScript接口支持的，没有统一规范。实际上，**Level 0 Event**这个名字也不是正式的，只是依照后来的命名规范取的一个名字，你完全可以忽略它。
 
-它本质上是DOM节点的一个属性。因此它在类型数量和灵活性上没有后来的 Level 2 Event Model高。定义方式也是通过属性赋值的方式完成。有两种：
+它本质上是DOM节点的一个属性，定义方式也是通过属性赋值的方式完成。有两种：
 
 * Inline model
 ```
@@ -122,8 +110,10 @@ targetElem.onclick = function() {
 targetElem.onclick = null;  // Remove a DOM Level 0 Event
 ```
 
+可以看到，这种事件定义比较死板，在类型数量和灵活性上没有后来的Level 2 Event Model高。随着web应用功能越来越丰富，人们急需灵活性更高的DOM事件模型。
+
 ### Flexible Event Model
-为了增加事件模型的灵活性，W3C定义了[DOM Level 2 Event Model](http://www.w3.org/TR/DOM-Level-2-Events/)和[DOM Level 3 Event Model](http://www.w3.org/TR/DOM-Level-3-Events/)。
+为了增加事件模型的灵活性，W3C重新定义了DOM事件模型规范。该规范先后经历了[DOM Level 2 Event Model](http://www.w3.org/TR/DOM-Level-2-Events/)和[DOM Level 3 Event Model](http://www.w3.org/TR/DOM-Level-3-Events/)两个版本。
 
 #### DOM Level 2 Event Model
 
@@ -166,15 +156,15 @@ targetElem.removeEventListener("click", handler, false);
 #### DOM Level 3 Event Model
 > This specification defines the Document Object Model Events Level 3, a generic platform- and language-neutral event system which allows registration of event handlers, describes event flow through a tree structure, and provides basic contextual information for each event. The Document Object Model Events Level 3 builds on the Document Object Model Events Level 2 [DOM2 Events]
 
-DOM Level 3 Event Model是对Level 2 Event Model的改进和具体化规范。因此重点以它为基础来介绍DOM Event Model。
+DOM Level 3 Event Model是对Level 2 Event Model的改进和具体化规范，是最新版本的DOM事件模型。因此重点以它为基础来介绍DOM Event Model。
 
 DOM Event Model主要包括以下关键术语的定义和描述：
 
 * DOM Event Architecture
     * Event Flow
-      * Capturing 事件流环节之一。从祖先到EventTarget节点。
-      * Hit Target 事件流环节之一，事件到达目标节点。
-      * Bubbling 时间流环节之一。由EventTarget节点到祖先。
+      * Capturing。事件流的环节之一。从祖先到EventTarget节点。
+      * Hit Target。事件流的环节之一，事件到达目标节点。
+      * Bubbling。事件流的环节之一。由EventTarget节点到祖先。
     * Cancelable
       * 每个DOM Event都有一个默认的处理程序，通常是在注册的处理程序结束之后执行
       * 事件的默认处理程序依赖于DOM实现者（比如浏览器）的具体实现
@@ -214,10 +204,10 @@ DOM Event Model中最重要的就是[事件流](http://www.w3.org/TR/DOM-Level-2
 ![dom-event-flow](https://farm8.staticflickr.com/7543/15593158310_00fd385447.jpg)
 
 ## Surpress an Event
-这里指的是终止事件流的执行。本来通过DOM定义的接口就能实现，但现在jQuery太流行，而它又对DOM接口进行了封装，动作稍微不太一样。因此这里分两种JavaScript环境来介绍如果终止一个事件流。
+这里指的是终止事件流的执行。这个功能本来通过DOM定义的规范接口就能实现，但现在jQuery太流行，而jQuery又对DOM接口进行了封装，动作稍微不太一样。因此这里分两种JavaScript环境来介绍如何终止一个事件流。
 
 ### by DOM
-下面我就来看看本文最开始提到的四种方案：
+下面我们就来看看本文最开始提到的四种方案：
 
 * `return false;`
   * 无效语句，详情见下面的说明。（Level 0 Event中有效，不过不规范，忽略）
@@ -246,21 +236,21 @@ DOM Event Model中最重要的就是[事件流](http://www.w3.org/TR/DOM-Level-2
 
 * `return false;` by W3C
   * Level 2 Event Model中对[EventListener接口](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-registration)的定义中说明了，注册的事件处理程序`handleEvent`是没有返回值的
-  * 使用Vanilla JavaScript在事件处理程序中调用`return false;`将没有任何效果
+  * 因此使用Vanilla JavaScript在事件处理程序中调用`return false;`将没有任何效果
   * 不排除有些浏览器在实现DOM的时候，没有依照规范来，对`handleEvent`处理了返回值。但这并不可靠，我们在写程序时要避免使用这种方式。
 
 ### by jQuery
-jQuery基于DOM Level 3 Event对event重新进行了封装，源码[jQuery.Event](https://github.com/jquery/jquery/blob/master/src/event.js#L668)。关于`surpress an event`部分的不同有：
+jQuery基于DOM Level 3 Event对event重新进行了封装，源码：[jQuery.Event](https://github.com/jquery/jquery/blob/master/src/event.js#L668)。jQuery在处理`surpress an event`部分的不同有：
 
 * `event.stopImmediatePropagation()`中会默认调用`event.stopPropagation()`
-* 它的handleEvent包含一个返回值[event.result](http://api.jquery.com/event.result/)
-* 如果在handleEvent中调用了`return false;`，将会调用`event.preventDefault() && event.stopPropagation()`。参见源码[jQuery - Event Dispatch](https://github.com/jquery/jquery/blob/master/src/event.js#L399)
+* jQuery.Event的handleEvent包含一个返回值[event.result](http://api.jquery.com/event.result/)
+* 如果在handleEvent中调用了`return false;`，将会自动触发`event.preventDefault() && event.stopPropagation()`。参见源码：[jQuery - Event Dispatch](https://github.com/jquery/jquery/blob/master/src/event.js#L399)
 
 关于这四种方法在jQuery下的效果和选用，这篇文章以实际例子给出了参考：[jQuery Events: Stop (Mis)Using Return False](http://fuelyourcoding.com/jquery-events-stop-misusing-return-false/)。
 
-结论就是：
+结论就是，在使用jQuery库来处理事件的时候：
 * 不要使用jQuery的`return false;`
-* 根据你的需要来使用其他三种标准DOM方法，注意jQuery的真实动作
+* 根据你的需要来使用其他三种方法，同时注意jQuery的真实动作
   * `preventDefault()` - 阻止事件默认程序的执行，但不会阻止事件的传播
   * `stopPropagation()` - 阻止事件的传播，但会执行完当前对象上绑定的事件处理程序
   * `stopImmediatePropagation()` - 阻止当前对象上未执行的事件处理程序，同时组织事件的传播
