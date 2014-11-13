@@ -50,7 +50,7 @@ JavaScript引擎维护一个*execution context stack*，当前的*running execut
 
 因此，*Variable Scope*就是指当前的*running execution context*中的*VariableEnvironment*。
 
-##With Statement
+###VariableEnvironment in Browser
 答案中有人说，浏览器中的JavaScript代码是这样被执行的：
 ```
 with (window) {
@@ -58,12 +58,12 @@ with (window) {
 }
 ```
 
-我考证了下，没找到根据。不过根据实际经验，这个是成立的。由此第二条和第三条都是成立的。
-
-因为根据[ECMAScript中对`With`的定义](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-with-statement)：
+我试图考证这个说法，但最终还是没找到依据。假设它是成立的，根据[ECMAScript中对`With`的定义](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-with-statement)：
 > The with statement adds an object environment record for a computed object to the lexical environment of the running execution context. It then executes a statement using this augmented lexical environment. Finally, it restores the original lexical environment.
 
-所以，`window`就成了浏览器中JavaScript代码的*original lexical environment*，也就是*VariableEnvironment*
+`window`就是浏览器中JavaScript代码的*original lexical environment*，也就是*VariableEnvironment*。
+
+即便不是用with语句包裹，实际经验也能证明这个是成立的。由此第二条和第三条都是成立的。
 
 ##变量解析
 当JavaScript引擎解析到一个语句里的`a`变量时，如何确定它的值呢？
