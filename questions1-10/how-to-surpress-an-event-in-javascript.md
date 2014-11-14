@@ -103,14 +103,16 @@ DOM Event Architecture中最重要的就是Event Flow，接下来会详细介绍
 * Traditional model
 ```
 var targetElem = document.getElementById("target");
-targetElem.onclick = function() {
+targetElem.onclick = function(event) {
   console.log('clicked');
   console.log(this.id); // `this` refers to targetElem itself
+  // Use `return false;` to surpress default action of event
+  // Also modern browser support `event.preventDefault();` for Level 0 Event as well
 };
 targetElem.onclick = null;  // Remove a DOM Level 0 Event
 ```
 
-可以看到，这种事件定义比较死板，在类型数量和灵活性上没有后来的Level 2 Event Model高。随着web应用功能越来越丰富，人们急需灵活性更高的DOM事件模型。
+可以看到，只能对事件定义一个处理程序，如果后续有新的定义，那么前面定义的处理程序将被覆盖。这种事件定义比较死板，在类型数量和灵活性上没有后来的Level 2 Event Model高。随着web应用功能越来越丰富，人们急需灵活性更高的DOM事件模型。
 
 ### Flexible Event Model
 为了增加事件模型的灵活性，W3C重新定义了DOM事件模型规范。该规范先后经历了[DOM Level 2 Event Model](http://www.w3.org/TR/DOM-Level-2-Events/)和[DOM Level 3 Event Model](http://www.w3.org/TR/DOM-Level-3-Events/)两个版本。
