@@ -46,7 +46,7 @@
 21. 一些JavaScript的编码习惯和奇怪写法 [!function(){}](http://stackoverflow.com/questions/3755606/what-does-the-exclamation-mark-do-before-the-function) [!!variant](http://stackoverflow.com/questions/784929/what-is-the-not-not-operator-in-javascript) [$variant](http://stackoverflow.com/questions/205853/why-would-a-javascript-variable-start-with-a-dollar-sign) [default parameter value](http://stackoverflow.com/questions/894860/set-a-default-parameter-value-for-a-javascript-function) [wat-talk](http://stackoverflow.com/questions/9032856/what-is-the-explanation-for-these-bizarre-javascript-behaviours-mentioned-in-the) [code-structure](http://stackoverflow.com/questions/247209/current-commonly-accepted-best-practices-around-code-organization-in-javascript)
 22. [JavaScript中的`falsy values`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/falsy-values-in-javascript.md)
 23. HTML5 Storage [Source1](http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage)
-24. JavaScript的参数传递方式：传值or传引用 [Source](http://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language)
+24. [JavaScript的参数传递方式：传值or传引用](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/parameter-passed-by-value-or-reference.md)
 25. document的状态onload/ready? [Source1](http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready)
 26. 一些目前没有答案/无法解决的问题 [Source1](http://stackoverflow.com/questions/446892/how-to-find-event-listeners-on-a-dom-node) [Source2](http://stackoverflow.com/questions/4907843/open-a-url-in-a-new-tab-using-javascript)
 
