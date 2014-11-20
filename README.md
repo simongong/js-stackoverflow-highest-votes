@@ -44,7 +44,7 @@
 19. [JavaScript对URL编码的处理](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/url-encode-in-javascript.md)
 20. [如何修改浏览器地址栏的URL](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/modify-url-in-address-bar-without-reloading.md)
 21. 一些JavaScript的编码习惯和奇怪写法 [!function(){}](http://stackoverflow.com/questions/3755606/what-does-the-exclamation-mark-do-before-the-function) [!!variant](http://stackoverflow.com/questions/784929/what-is-the-not-not-operator-in-javascript) [$variant](http://stackoverflow.com/questions/205853/why-would-a-javascript-variable-start-with-a-dollar-sign) [default parameter value](http://stackoverflow.com/questions/894860/set-a-default-parameter-value-for-a-javascript-function) [wat-talk](http://stackoverflow.com/questions/9032856/what-is-the-explanation-for-these-bizarre-javascript-behaviours-mentioned-in-the) [code-structure](http://stackoverflow.com/questions/247209/current-commonly-accepted-best-practices-around-code-organization-in-javascript)
-22. JavaScript中的`falsy values` [Source1](http://stackoverflow.com/questions/801032/why-is-null-an-object-and-whats-the-difference-between-null-and-undefined)
+22. [JavaScript中的`falsy values`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/falsy-values-in-javascript.md)
 23. HTML5 Storage [Source1](http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage)
 24. JavaScript的参数传递方式：传值or传引用 [Source](http://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language)
 25. document的状态onload/ready? [Source1](http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready)
