@@ -43,11 +43,12 @@
 18. JavaScript中的TDD和单元测试工具 [Source](http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd)
 19. [JavaScript对URL编码的处理](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/url-encode-in-javascript.md)
 20. [如何修改浏览器地址栏的URL](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/modify-url-in-address-bar-without-reloading.md)
-21. 一些JavaScript的编码习惯和奇怪写法 [!function(){}](http://stackoverflow.com/questions/3755606/what-does-the-exclamation-mark-do-before-the-function) [!!variant](http://stackoverflow.com/questions/784929/what-is-the-not-not-operator-in-javascript) [$variant](http://stackoverflow.com/questions/205853/why-would-a-javascript-variable-start-with-a-dollar-sign) [default parameter value](http://stackoverflow.com/questions/894860/set-a-default-parameter-value-for-a-javascript-function) [wat-talk](http://stackoverflow.com/questions/9032856/what-is-the-explanation-for-these-bizarre-javascript-behaviours-mentioned-in-the) [code-structure](http://stackoverflow.com/questions/247209/current-commonly-accepted-best-practices-around-code-organization-in-javascript)
+21. [一些JavaScript的编码习惯和奇怪写法](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/tricks-in-javascript.md)
 22. [JavaScript中的`falsy values`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/falsy-values-in-javascript.md)
 23. HTML5 Storage [Source1](http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage)
 24. [JavaScript的参数传递方式：传值or传引用](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/parameter-passed-by-value-or-reference.md)
 25. [document的状态onload/ready?](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/window-onload-document-ready.md)
 26. 一些目前没有答案/无法解决的问题 [Source1](http://stackoverflow.com/questions/446892/how-to-find-event-listeners-on-a-dom-node) [Source2](http://stackoverflow.com/questions/4907843/open-a-url-in-a-new-tab-using-javascript)
+27. JavaScript代码结构的最佳实践BP [code-structure](http://stackoverflow.com/questions/247209/current-commonly-accepted-best-practices-around-code-organization-in-javascript)
 
 *...未完待续*
