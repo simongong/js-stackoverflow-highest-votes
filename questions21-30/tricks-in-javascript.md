@@ -58,7 +58,7 @@ if(bar){
 ## 函数参数的缺省值
 原问题：[Set a default parameter value for a JavaScript function](http://stackoverflow.com/questions/894860/set-a-default-parameter-value-for-a-javascript-function)
 
-在Java/C++/Python中定义方法的时候都能为参数指定一个默认值，但JavaScript语言没有这个机制。因此我们只能仿造。
+在C++/PHP/Python中定义方法的时候都能为参数指定一个默认值，但JavaScript语言没有这个机制。因此我们只能仿造。
 
 一般是这样来做的：
 
