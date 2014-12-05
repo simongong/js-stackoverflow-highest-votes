@@ -17,7 +17,7 @@ function functionTwo() {
 }
 ```
 
-##区别
+##区别 - hoist
 尽管平时写代码会随意地把这两种方式混用，但它们在**语义**上还是有区别的。区别的原因就在于JavaScript解释器对程序的解析过程中的一个特性——**hoist**
 > Function declarations and function variables are always moved (‘hoisted’) to the top of their JavaScript scope by the JavaScript interpreter.  
 -- [JavaScript Scoping and Hoisting](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)
@@ -65,8 +65,10 @@ abc(); // works. we can call it again
 var foo = 1;
 function bar() {
   if (!foo) {
-    var foo = 10 }
-  return foo; }
+    var foo = 10 
+  }
+  return foo; 
+}
 bar(); // 输出10
 ```
 `foo`被hoisted，初始化为`undefined`。所以`!foo`为真，然后执行`foo = 10;`。等于说第一行定义的`var foo = 1;`压根没起到任何作用。
