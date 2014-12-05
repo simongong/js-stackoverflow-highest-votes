@@ -60,21 +60,39 @@ abc(); // works. we can call it again
 - 使用functionOne定义公开成员
 - 使用functionTwo定义私有方法
 
-这部分内容写到这里就差不多了。但我对hoist还是有些疑问。举个例子：
+这部分内容写到这里就差不多了。但我对hoist还有要注意的地方。举个例子：
 ```
 var foo = 1;
 function bar() {
   if (!foo) {
+    console.log('foo is still falsy');
     var foo = 10 
   }
   return foo; 
 }
 bar(); // 输出10
 ```
-`foo`被hoisted，初始化为`undefined`。所以`!foo`为真，然后执行`foo = 10;`。等于说第一行定义的`var foo = 1;`压根没起到任何作用。
+在函数`bar()`中`foo`被hoisted，初始化为`undefined`。所以`!foo`为真，然后执行`foo = 10;`。等于说第一行定义的`var foo = 1;`压根没起到任何作用。
 
-好，那么问题来了，我们为什么需要**hoist**？
-*(难道是因为当初为了增加JavaScript的灵活性，不用拘泥于__先定义后使用__，而弄出一个hoist?)*
+改一个地方
+```
+var foo = 1;
+function bar() {
+  if (!foo) {
+    console.log('foo is still falsy');
+    foo = 10 
+  }
+  return foo; 
+}
+bar(); // 输出1
+```
+函数`bar()`内没有`var foo的`定义，因此用的是代码第一行定义的`var foo = 1;`，。
+
+**hoist**是把双刃剑：
+
+- 增加JavaScript的灵活性，不用拘泥于**先定义后使用**
+- 对于函数是好的，很方便
+- 对于变量，还是建议遵循**先定义后使用**的原则
 
 
 
