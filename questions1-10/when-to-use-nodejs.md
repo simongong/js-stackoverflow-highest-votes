@@ -7,7 +7,7 @@
 - [Node.js与HTTP Server](#nodejs-vs-http-server)
 
 ##Problems
-###Web Server的性能问题。
+###Web Server的性能问题
 - 并发连接数瓶颈（多进程、线程）
 - 扩展只能靠硬件
 
@@ -37,7 +37,7 @@ Node.js的解决办法：使用V8引擎、模块化。这样后端应用程序�
 
 ##Pros and Cons
 任何一项新技术的诞生，都是为了解决原有技术下无法解决的问题，或者有待改进的方面。同时，新技术的引进又可能会带来新的问题。
-[source](http://stackoverflow.com/questions/1884724/what-is-node-js)
+[参考](http://stackoverflow.com/questions/1884724/what-is-node-js)
 
 ###Node.js的优点
 Node.js能解决的问题，或者说使用Node.js能带来的好处有：
@@ -47,9 +47,9 @@ Node.js能解决的问题，或者说使用Node.js能带来的好处有：
 
 ###Node.js的不足
 目前Node.js存在的问题：
-- 对V8的依赖，对Google的依赖 [source](http://www.olympum.com/future/nodejs-to-v8-or-not-to-v8/)  
+- 对V8的依赖，对Google的依赖 [参考](http://www.olympum.com/future/nodejs-to-v8-or-not-to-v8/)  
 Node.js需要一个JavaScript引擎，用来负责解释并运行JavaScript程序。而V8已经在Chrome中证明了它是一个高效的JavaScript引擎。同时V8并不依赖于Chrome，它可以单独被嵌入任何程序，依然可以正常工作。因此，Node.js使用了V8，没有V8就没有Node.js现在的性能。
-- Debug困难，回调机制的通病 [source1](http://blog.nodejs.org/2012/04/25/profiling-node-js/) [source2](http://mcavage.me/presentations/dtrace_conf_2012-04-03/)
+- Debug困难，回调机制的通病 [参考1](http://blog.nodejs.org/2012/04/25/profiling-node-js/) [参考2](http://mcavage.me/presentations/dtrace_conf_2012-04-03/)
 - 对计算密集型请求处理能力较弱  
 使用Web Workers模式来解决，开启一个子进程来处理计算密集型任务。
 - 异常存活性  
@@ -99,11 +99,11 @@ Node.js只是提供了构建HTTP Server的素材，你需要自己编程去实�
 
 Node.js is a ready to programming environment.
 
-同时，除了HTTP server之外，Node.js还能做很多其他的事，任何web-based application都行。比如使用socket.io这个模块，你能实现websocket协议通信，而非HTTP通信。
+同时，除了HTTP server之外，Node.js还能做很多其他的事，参考其[API文档](http://nodejs.org/api/)。
 
-事实上在很多情况下，Node.js的确是被用作一个更广泛的应用服务器，同时与HTTP Server共存：
-- 编写多个Node.js应用运行在不同端口，提供不同的服务
-- 利用Nginx的high performance HTTP Serving特长，通过Nginx来反向代理到80、443端口
+事实上在很多情况下，Node.js是被用作一个更广泛的应用服务器，同时与HTTP Server共存：
+- 编写多个Node.js应用运行在不同端口，完成不同的服务
+- 利用Nginx的high performance HTTP Serving特长，通过Nginx来反向代理到80、443等Node.js应用的端口
 
 Node.js这时候扮演的是应用服务器的角色。
 
