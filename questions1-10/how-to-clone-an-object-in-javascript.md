@@ -3,15 +3,14 @@
 * [What is the most efficient way to clone an object?](What is the most efficient way to clone an object?)
 * [Most elegant way to clone a JavaScript object](http://stackoverflow.com/questions/728360/most-elegant-way-to-clone-a-javascript-object)
 
-这个问题从提问那会儿开始，经过了6年旷日持久的讨论，jQuery作者John Resig也顺便推销了一下[jQuery.clone()](http://api.jquery.com/clone/)。实际上`jQuery.clone`表现得确实不错，后来的[underscore](http://underscorejs.org/#clone)和[lodash](https://lodash.com/docs#clone)也都提供了类似函数。
+这个问题从提问那会儿开始，经过了6年旷日持久的讨论，jQuery作者John Resig也顺便推销了一下[jQuery.clone()](http://api.jquery.com/clone/)。实际上`jQuery.clone`表现得确实不错，后来的[underscore](http://underscorejs.org/#clone)和[lodash](https://lodash.com/docs#clone)也都提供了类似函数。而JSON本身也能简单的实现拷贝功能。
 
-这里先给一个这三个方案的性能比较：[object clone jquery vs underscore vs lodash](http://jsperf.com/object-clone-jquery-vs-underscore-vs-lodash)
+这里先给一个这四个方案的性能比较：[object clone jquery vs underscore vs lodash](http://jsperf.com/object-clone-jquery-vs-underscore-vs-lodash)
 
-需要注意的是，underscore不提供deep clone方法。因为他们觉得无法提供一个完美的能广泛适用的deep clone。对此问题的讨论[github issue](https://github.com/jashkenas/underscore/issues/162)。
+从性能测试结果来看，在实现deep clone的前提下，表现最好的是Lo-Dash。但有两个地方需要注意的是：
 
-从性能测试结果来看，在实现deep clone的前提下，表现最好的是Lo-Dash。
-
-因此，原问题的简单答案就是：使用`lodash.cloneDeep(obj)`。
+1. 这四种方案拷贝出来的结果是不一样的，因此不能直接根据此性能结果来下结论
+2. underscore不提供deep clone方法。因为他们觉得无法提供一个完美的能广泛适用的deep clone。对此问题的讨论[github issue](https://github.com/jashkenas/underscore/issues/162)。
 
 以下内容是扩展，真正的答案在最后。
 
@@ -35,15 +34,15 @@ JSON.parse(JSON.stringify(obj));
 
 第二个问题就比较麻烦，这里稍微说一下。
 
-## Object.prototype
+## Prototype Chain实现
 对于prototype chain机制，其实现也是很直白的。
 
-如果你在chrome的Dev Tools里查看过JavaScript对象，你就会知道每个对象都有一个__proto__属性。该属性有一个名字，它就是prototype.constructor，显示为：`__proto__: constructor`。如下图所示：
+如果你在chrome的Dev Tools里查看过JavaScript对象，你就会知道每个对象都有一个__proto__属性。该属性有一个名字，它就是prototype.constructor，显示为：`__proto__: constructor`。这个属性在Debug时很有用。
+
+如下图所示：
 ![__proto__ chain](https://cloud.githubusercontent.com/assets/729479/5331546/d70c52a2-7e72-11e4-932f-953682404ee3.png)
 
 可以看到，`__proto__`属性中还有一个Object.prototype对象，所以它是一个嵌套定义。
-
-关于prototype chain，不止是`__proto__`属性。如果你还手动给一个自定义`function.prototype`添加过属性，那么你还会看到一个`prototype`属性。
 
 ## 如何克隆Object.prototype
 目前为止这是一个无解问题，根本原因是ECMAScript在这方面还不够完备。
