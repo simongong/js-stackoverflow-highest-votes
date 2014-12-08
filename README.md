@@ -26,7 +26,7 @@
 1. [JavaScript中的闭包是如何工作的？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-do-javascript-closures-work.md)
 2. [什么是JavaScript严格模式？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/what-is-use-strict-in-javascript.md)
 3. [如何定义一个JavaScript函数？](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-define-a-function-in-javascript.md)
-4. 如何克隆Clone一个JavaScript对象 [Source1](http://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-clone-an-object) [Source2](http://stackoverflow.com/questions/728360/most-elegant-way-to-clone-a-javascript-object)
+4. [如何克隆Clone一个JavaScript对象](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-clone-an-object-in-javascript.md)
 5. [为什么有些API在返回的JSON数据头部加一个`while(1);`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/why-prepend-while1-to-JSON-response.md)
 6. [如何移除一个对象的某个属性](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/remove-property-from-javascript-object.md)
 7. [`event.preventDefault()` VS `return false`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-surpress-an-event-in-javascript.md)
