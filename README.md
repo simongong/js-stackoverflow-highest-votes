@@ -40,15 +40,15 @@
 15. [什么是JSONP](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/jsonp.md)
 16. [如何清空一个JavaScript数组](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/clear-an-array-in-javascript.md)
 17. [如何遍历一个JavaScript数组](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/loop-an-array-in-javascript.md)
-18. [JavaScript中的TDD和单元测试工具](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/unittest-tools-in-javascript.md) [Source](http://stackoverflow.com/questions/300855/javascript-unit-test-tools-for-tdd)
+18. [JavaScript中的TDD和单元测试工具](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/unittest-tools-in-javascript.md)
 19. [JavaScript对URL编码的处理](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/url-encode-in-javascript.md)
 20. [如何修改浏览器地址栏的URL](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/modify-url-in-address-bar-without-reloading.md)
 21. [一些JavaScript的编码习惯和奇怪写法](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/tricks-in-javascript.md)
 22. [JavaScript中的`falsy values`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/falsy-values-in-javascript.md)
-23. HTML5 Storage [Source1](http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage)
+23. [HTML5 Storage](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/object-serialization-in-javascript.md)
 24. [JavaScript的参数传递方式：传值or传引用](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/parameter-passed-by-value-or-reference.md)
 25. [document的状态onload/ready?](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/window-onload-document-ready.md)
-26. 一些目前没有答案/无法解决的问题 [Source1](http://stackoverflow.com/questions/446892/how-to-find-event-listeners-on-a-dom-node) [Source2](http://stackoverflow.com/questions/4907843/open-a-url-in-a-new-tab-using-javascript)
+26. [一些目前没有答案/无法解决的问题](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/missions-impossible-in-javascript.md)
 27. JavaScript代码结构的最佳实践BP [code-structure](http://stackoverflow.com/questions/247209/current-commonly-accepted-best-practices-around-code-organization-in-javascript)
 
 *...未完待续*
