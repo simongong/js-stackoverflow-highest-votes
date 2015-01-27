@@ -45,7 +45,7 @@
 20. [如何修改浏览器地址栏的URL](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions11-20/modify-url-in-address-bar-without-reloading.md)
 21. [一些JavaScript的编码习惯和奇怪写法](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/tricks-in-javascript.md)
 22. [JavaScript中的`falsy values`](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/falsy-values-in-javascript.md)
-23. [HTML5 Storage](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/object-serialization-in-javascript.md)
+23. [JavaScript对象序列化](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/object-serialization-in-javascript.md)
 24. [JavaScript的参数传递方式：传值or传引用](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/parameter-passed-by-value-or-reference.md)
 25. [document的状态onload/ready?](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/window-onload-document-ready.md)
 26. [一些目前没有答案/无法解决的问题](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/missions-impossible-in-javascript.md)
