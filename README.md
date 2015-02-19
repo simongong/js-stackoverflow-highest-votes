@@ -49,7 +49,7 @@
 24. [JavaScript的参数传递方式：传值or传引用](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/parameter-passed-by-value-or-reference.md)
 25. [document的状态onload/ready?](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/window-onload-document-ready.md)
 26. [一些目前没有答案/无法解决的问题](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/missions-impossible-in-javascript.md)
-27. JavaScript代码结构的最佳实践BP [code-structure](http://stackoverflow.com/questions/247209/current-commonly-accepted-best-practices-around-code-organization-in-javascript)
+27. [JavaScript代码结构的最佳实践BP](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/BPs-in-javascript.md)
 28. [JavaScript中的事件委托](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/event-delegation.md)
 
 *...未完待续*
