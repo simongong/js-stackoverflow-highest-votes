@@ -52,5 +52,6 @@
 27. [JavaScript代码结构的最佳实践BP](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/BPs-in-javascript.md)
 28. [JavaScript中的事件委托](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/event-delegation.md)
 29. [客户端与服务器端编程有什么差别](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/client-side-and-server-side-programming.md)
+30. [JavaScript中的数值转换操作](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/convert-number-in-javascript.md)
 
 *...未完待续*
