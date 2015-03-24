@@ -53,5 +53,6 @@
 28. [JavaScript中的事件委托](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/event-delegation.md)
 29. [客户端与服务器端编程有什么差别](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/client-side-and-server-side-programming.md)
 30. [JavaScript中的数值转换操作](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions21-30/convert-number-in-javascript.md)
+31. [JavaScript中对象属性的定义](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions31-40/define-object-property-in-javascript.md)
 
 *...未完待续*
