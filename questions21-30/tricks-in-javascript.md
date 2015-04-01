@@ -2,6 +2,48 @@
 
 这里收集一些常见的JavaScript伎俩，按需自取。
 
+## Array.prototype.slice.call(arguments)
+原问题：[how does Array.prototype.slice.call() work?](http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work)
+
+这是我们常用的用来把函数的arguments转换成正常数组的方式。我们可以从中一探两个究竟：
+
+* Array.prototype.slice()是如何工作的
+  * 参考[MDN - Slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+* Function.arguments的结构是怎样的
+  * 一个[array-like object](https://www.safaribooksonline.com/library/view/javascript-the-definitive/9781449393854/ch07s11.html)
+  * 有length属性
+  * 没有push/pop/forEach/indexOf等Array.prototype对象上的方法
+
+下面是我在chrome console测试的：
+
+```
+var data = {'1' : 'a', '2' : 'b', length : 4}
+undefined
+Array.prototype.slice.call(data)
+[undefined × 1, "a", "b", undefined × 1]
+```
+
+可以大概感受一下arguments的结构是怎样的。除了arguments之外，document.links, document.forms也是array-like object。
+
+我们还可以用`Array.prototype.slice.call(arguments, i)`来截取arguments的一部分。比如常用的`Object.extend`就可以用它来去掉第一个默认的`this`参数。
+
+```
+var objectExtend = function(where) {
+  Array.prototype.slice.call(arguments, 1).forEach(function(source) {
+    var key;
+    for (key in source) {
+      if (source.hasOwnProperty(key)) {
+        where[key] = source[key];
+      }
+    }
+  });
+  return where;
+};
+
+var combined = objectExtend({}, {a: 1}, {b: 2});
+}, )
+```
+
 ## !function foo(){}()
 原问题：[What does the exclamation mark do before the function?](http://stackoverflow.com/questions/3755606/what-does-the-exclamation-mark-do-before-the-function)
 
