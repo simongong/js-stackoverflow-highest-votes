@@ -53,7 +53,7 @@ var a = ["JSON data"];
 可以看到，产生这个漏洞的原因有两个：
 * JavaScript允许对全局基本对象（Object/Array/...）重定义
   * ECMAScript4中已修复该问题，不允许重定义全局基本对象，查看[ES4-1.4](http://www.ecmascript.org/es4/spec/incompatibilities.pdf)
-* 浏览器解析`<script scr="api">`的时候，将下载到的JSON做为一个JavaScript脚本来执行，执行方式就是对一个Object/Array变量的赋值语句
+* 浏览器解析`<script src="api">`的时候，将下载到的JSON做为一个JavaScript脚本来执行，执行方式就是对一个Object/Array变量的赋值语句
   * 已有人向Mozilla[提交了这个bug](https://bugzilla.mozilla.org/show_bug.cgi?id=376957)，已被修复
 
 这两点完美配合，暴露出了上面这个漏洞。
