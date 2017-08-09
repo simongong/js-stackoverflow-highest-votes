@@ -11,11 +11,11 @@
 
 这几种方法的区别，主要在于**内存**和**引用**。
 
-* A = []; 
+* A = [];
 改变A的指向，指向一块新内存，内容为一个空数组。原数组[1, 2, 3, 4]将继续存在或以后被GC回收。
-* A.length = 0;  
+* A.length = 0;
 这个语句会使JavsScript解释器将[1, 2, 3, 4]那块内存的内容变成[].
-* A.splice(0, A.length);  
+* A.splice(0, A.length);
 对于A来说与2方法的效果一致。但该方法有返回值，返回值是一块新内存，内容是被移除的子数组。该例中会返回[1, 2, 3, 4]。
 * while(A.length > 0){ A.pop(); }
 与2方法的效果一致，并且比1,2,3的效率都要高。
@@ -27,14 +27,14 @@
 * [Array.length属性](#array-length)
 * [Array.length = n到底做了些什么](#set-array-length)
 
-##Array Length
+## Array Length
 ECMAScript6草案中定义：[Array.length](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-properties-of-array-instances-length)
 
 * 永远比array index大
 * 作为一个对象的属性，其本身属性为{ [[Writable]]: true, [[Enumerable]]: false, [[Configurable]]: false }
 * 改变Array.length的值，会导致数组实际大小的改变。
 
-##Set Array Length
+## Set Array Length
 同样，ECMAScript6草案中也定义了[ArraySetLength(A, Desc)](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-arraysetlength) 的抽象操作过程。
 
 对于语句
@@ -54,7 +54,7 @@ while(A.length > 0){ A.pop(); }
 ```
 要低。
 
-##总结
+## 总结
 * `while(A.length > 0){ A.pop(); }` 最直接，效率第一
 * `A = [];` 最简洁直观，但浪费GC。效率第二
 * `A.length = 0` 也简洁直观，但效率最低

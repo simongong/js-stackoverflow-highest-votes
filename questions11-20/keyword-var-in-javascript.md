@@ -13,16 +13,16 @@
 
 从这几条总结中，再提炼一下涉及到的JavaScript知识点。
 
-##Varaiable Scope
+## Varaiable Scope
 ECMAScript在对[Variable Statement](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-variable-statement)的定义中提到：
-> A var statement declares variables that are scoped to the running execution context's VariableEnvironment.  
+> A var statement declares variables that are scoped to the running execution context's VariableEnvironment.
 Var variables are created when their containing Lexical Environment is instantiated and are initialized to undefined when created.
 
 因此，`var`定义的对象是**有范围**的，这个范围是**当前运行的执行上下文的变量环境**_(running execution context's VariableEnvironment)_。
 
 顺藤摸瓜，我们来看看什么是*running execution context*和*VariableEnvironment*。
 
-###Running Exucution Contexts
+### Running Exucution Contexts
 首先来看*[Exucution Context](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-execution-contexts)*：
 > 执行上下文，是由ECMAScript的实现*（比如V8）*提供的一个对象，用来追踪代码的执行进度和相关的运行时的值。在代码被执行的任一时刻，都只有一个执行上下文。
 
@@ -36,7 +36,7 @@ Var variables are created when their containing Lexical Environment is instantia
 * LexicalEnvironment - 词法环境，解析该上下文中的标识符
 * VariableEnvironment - 标识该上下文中由*VariableStatements*创建的变量
 
-###VariableEnvironment
+### VariableEnvironment
 初始创建执行上下文的时候，`LexicalEnvironment`和`VariableEnvironment`的值是一样的。在代码被执行的过程中，VariableEnvironment始终不变，而LexicalEnvironment会改变。
 
 VariableEnvironment包含以下两部分：
@@ -50,7 +50,7 @@ JavaScript引擎维护一个*execution context stack*，当前的*running execut
 
 因此，*Variable Scope*就是指当前的*running execution context*中的*VariableEnvironment*。
 
-###VariableEnvironment in Browser
+### VariableEnvironment in Browser
 答案中有人说，浏览器中的JavaScript代码是这样被执行的：
 ```
 with (window) {
@@ -65,7 +65,7 @@ with (window) {
 
 即便不是用with语句包裹，实际经验也能证明这个是成立的。由此第二条和第三条都是成立的。
 
-##变量解析
+## 变量解析
 当JavaScript引擎解析到一个语句里的`a`变量时，如何确定它的值呢？
 
 答案就是在*VariableEnvironment*中查找。

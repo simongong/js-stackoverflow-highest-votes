@@ -25,7 +25,7 @@ console.log('Value of retrievedObject: ' + retrievedObject);    // Value of retr
 ```
 他在Safari, Chrome和Firefox试过，都是一样的结果。不知道这是[HTML5 Web Storage](http://www.w3.org/TR/webstorage/)规范的不足还是浏览器实现的缺陷。
 
-##序列化
+## 序列化
 对象的存储，就是序列化问题。
 
 对象一般是指一个结构化的数据。JavaScript中的对象是一个JSON实例：
@@ -43,7 +43,7 @@ obj {
 * 在存储之前把对象按某种方式变成一串连续数据——序列化
 * 取这个数据之后再逆向恢复成原始的对象结构——反序列化
 
-###Java对象序列化
+### Java对象序列化
 最早接触序列化是在Java中。
 
 比如写一个贪吃蛇的游戏，暂停/退出之前需要保存当前游戏的进度，这时就需要做序列化，把游戏中各个状态值保存到物理文件。然后在下次启动游戏的时候，读取已保存的这些状态值。
@@ -92,7 +92,7 @@ obj {
     }
 }
 ```
-##JSON对象序列化
+## JSON对象序列化
 其实HTML5 Web Storage中的规范没有问题，浏览器的实现也没有问题。问题就是提问者没有把JavaScript进行序列化/反序列化。
 
 JavaScript对象的序列化很简单，使用JSON的`stringify() && parse()`接口来进行序列化/反序列化。
@@ -108,6 +108,6 @@ var retrievedObject = localStorage.getItem('testObject');
 // 反序列化
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
 ```
-###注意
+## 注意
 * `JSON.stringify()`仅对enumerable的属性有效
 * 重要的是：想清楚你要保存哪些“数据”（属性），而不是保存“业务逻辑”（函数）

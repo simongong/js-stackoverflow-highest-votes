@@ -2,9 +2,9 @@
 
 这个问题是我偶然碰到的，不是投票排名很高的问题，但我觉得还蛮重要的。
 
-##基础
+## 基础
 
-###Event Bubbling
+### Event Bubbling
 要理解JavaScript中的Event Delegation，首先需要了解Event Bubbling。
 
 之前在[event.preventDefault() vs. return false](https://github.com/simongong/js-stackoverflow-highest-votes/blob/master/questions1-10/how-to-surpress-an-event-in-javascript.md)这个问题中已经对JavaScript事件模型说得比较细了。其中的Event Flow有三个部分：
@@ -15,14 +15,14 @@
 
 注意这个[Bubbling](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-bubbling)，它就是JavaScript Event Delegation的关键。即：发生在DOM节点上的事件会向上传递到祖先节点。
 
-###Event Delegation
+### Event Delegation
 Event Bubbling为Event Delegation提供了基础，它使得你可以：
 
 > 把若干个节点上的相同事件的处理函数event listener绑定到它的父节点上去，在父节点上统一处理，减轻对event listener的管理负担。
 
 这就是事件委托。通常用在一组元素上。比如`<ul>`节点下的一组`<li>`元素。
 
-##应用
+## 应用
 
 举个栗子。
 
@@ -48,12 +48,12 @@ Event Bubbling为Event Delegation提供了基础，它使得你可以：
 
 更好的方案是使用第二种：把event listener放在父元素上。
 
-####为什么能这么做
+### 为什么能这么做
 
 * 前面提到的Event Bubbling保证了`<ul>`元素上的事件会传递到`<ul>`元素
 * event listener中传入的`event`对象中包含了事件发生的真实节点——`<li>`的引用，你可以通过`event`对象访问到`<li>`节点的所有信息
 
-####如何实现
+### 如何实现
 
 在`<ul>`节点上添加event listener：
 
@@ -70,7 +70,7 @@ document.getElementById("parent-list").addEventListener("click", function(e) {
 ```
 通过这种方式，`<li>`节点可以任意添加，也不用担心event listener的添加和移除问题了。
 
-####更广泛的应用
+### 更广泛的应用
 
 上面的例子是简单场景下的示范：子元素都是`<li>`类型。
 

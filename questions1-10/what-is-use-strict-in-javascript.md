@@ -1,11 +1,11 @@
 原问题：[What does “use strict” do in JavaScript?](http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it)
 
-> Strict Mode是ECMAScript5引入的一个新特性。使用它能使得你的程序或者函数运行在**严格**的环境中。这个严格的运行环境能预防一些危险操作，并会给出异常信息。  
+> Strict Mode是ECMAScript5引入的一个新特性。使用它能使得你的程序或者函数运行在**严格**的环境中。这个严格的运行环境能预防一些危险操作，并会给出异常信息。
 - 捕获一些常见的编程陷阱
 - 阻止一些危险操作的发生（比如存取全局对象）
 - 禁用了JavaScript中的一些让你迷惑或易发生错误的特性
 
-###使用Strict Mode
+## 使用Strict Mode
 它是一个声明式的语句，语句本身就是`"use strict"`这个字符串。
 
 Strict Mode有其应用范围。
@@ -45,7 +45,7 @@ function(){
 
 *注意：Strict Mode并没有引入新的语法，你仍然可以对以前的代码使用它。*
 
-###哪些地方变严格？
+## 哪些地方变严格？
 jQuery的作者John Resig对此总结的不错，此部分内容来自他的文章：[ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)。
 
 - 变量必须先声明，再使用
@@ -84,13 +84,13 @@ function test2(arg) {
   ```
   - 禁用with(){}
 
-###浏览器支持
+## 浏览器支持
 如果浏览器不支持`use strict`，会当它是普通的JavaScript语句：定义一个字符串但没有被引用。因此对其他代码没有任何影响。
 
-当前浏览器对`use strict`的支持情况：  
+当前浏览器对`use strict`的支持情况：
 [ECMAScript 5 Strict Mode Supported by Browsers](http://caniuse.com/#feat=use-strict)
 
-###题外话
+## 题外话
 实际上，现在大家在项目中大多都使用了JSHint，就不需要在多个地方声明`use strict`了。
 如果你还没用过JSHint，请参考[JSHint Documentation](http://www.jshint.com/docs/)。
 

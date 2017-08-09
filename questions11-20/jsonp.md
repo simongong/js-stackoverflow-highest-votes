@@ -11,8 +11,8 @@ JSONP出现的场合，一般都有AJAX和JSON。
 
 就能弄清楚JSONP，分清楚它和其他名词的关系。
 
-##Background
-###AJAX
+## Background
+### AJAX
 首先我们要了解[AJAX](#https://developer.mozilla.org/en-US/docs/AJAX)：
 
 1. Asynchronous JavaScript + XML
@@ -24,11 +24,11 @@ XMLHttpRequest是一个JavaScript对象，最早由微软设计，后被Mozilla/
 由于XHR它对HTTP是一种很好地补充，目前[正在被W3C标准化](https://xhr.spec.whatwg.org)。
 
 常见的AJAX使用场景是：
-> 1. 通过JavaScript向某个remote API获取数据  
-2. 按需求提取并组织数据  
+> 1. 通过JavaScript向某个remote API获取数据
+2. 按需求提取并组织数据
 3. 操控当前页面的DOM，将数据显示。
 
-###Same Origin Policy
+### Same Origin Policy
 为了防止[CSRF攻击](https://www.owasp.org/index.php/Cross-Site_Request_Forgery)，Netscape Navigator于1995年提出了[同源策略](http://en.wikipedia.org/wiki/Same-origin_policy)的概念。
 
 该策略就是，对于一个web页面，只允许与其**同源** *(scheme://hostname:port)*的脚本操作该页面的DOM。
@@ -39,7 +39,7 @@ XMLHttpRequest是一个JavaScript对象，最早由微软设计，后被Mozilla/
 
 但在很多合法情况下，也会产生跨源JavaScript请求。有需求就有方案，绕过同源策略的方式有iframe, Web Proxy, [Cros-Origin Resource Sharing](http://www.w3.org/TR/cors/)等。
 
-##Problem
+## Problem
 由上面背景情况介绍可知，AJAX通信的两个主要问题是：
 
 1. 以何种格式来交换数据
@@ -49,7 +49,7 @@ XMLHttpRequest是一个JavaScript对象，最早由微软设计，后被Mozilla/
 
 对于问题2，如上所讲，现在有多种方式来绕过浏览器的同源策略。JSONP就是在AJAX下绕过同源策略的一种方式。
 
-##Solution
+## Solution
 [JSON-P](http://json-p.org)是一种轻量的数据交换格式。详细请查看其链接。
 
 其实JSONP是一种hack，它基于浏览器现在对于拥有`src`属性的标签的处理：自动下载并解析。比如`<script>, <img>, <iframe>`等标签，它们被浏览器赋予了拥有跨域的权利。
@@ -77,13 +77,13 @@ callback({"result": "data from remote.com"});
 
 由于它涉及了请求和响应两方面的一些规范，我们可以把JSONP看做是一个机制。该机制的一个要点就是允许用户传递一个callback参数给服务端，然后服务端返回数据时会将这个callback参数作为函数名来包裹住JSON数据，这样客户端就可以随意定制自己的函数来自动处理返回数据了。
 
-###与普通JSON响应的区别
+### 与普通JSON响应的区别
 JSONP与常见的AJAX+JSON有些许区别：
 
 * 客户端定义一个callback
 * 服务器返回的数据与callback相关，数据本身是一句JavaScript函数调用的代码：`callback(data)`，该函数的参数`data`就是JSON数据
 
-##总结
+## 总结
 
 1. 传统的Web API只能在后端用Python/PHP/Java调用，因为JavaScript有同源策略限制
 2. 为了让AJAX也能跨域，产生了JSONP

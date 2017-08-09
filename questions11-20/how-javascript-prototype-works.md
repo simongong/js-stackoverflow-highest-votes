@@ -14,7 +14,7 @@ Object.prototype有以下特点：
 我看到几乎所有人在讲Object prototype的时候，上来就讲Function prototype，举的例子也全都是函数的prototype属性。他们似乎遗漏了对一个前提的说明：
 > Why things about Object prototype come to Function prototype?
 
-##Object prototype
+## Object prototype
 我们由前面的定义可知道：所有JavaScript对象都有prtotype属性。
 
 而[JavaScript Standard Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects)中，只有Function有一个可写的prototype属性。因此，在谈到Object prototype的时候，很多时候是指Function prototype。
@@ -65,7 +65,7 @@ if (typeof Object.create != 'function') {
 来看一张对于JavaScript prototype的集大成的图（可以看完本文后续部分之后再回来看这张图）：
 ![prototype in javascript](https://cloud.githubusercontent.com/assets/729479/6819612/4cde299a-d307-11e4-9d00-2234e42eaa57.png)
 
-##Function prototype
+## Function prototype
 要说Function prototype，首先得明确：
 
 一个Function本身也是一个Object，因此它有__proto__属性。同时，它还有一个prototype属性，这是函数对象特有的。
@@ -134,7 +134,7 @@ assert( ninjaA.swingSword(), "Method exists, even out of order." );
 assert( ninjaB.swingSword(), "and on all instantiated objects." );
 ```
 
-##后记
+## 后记
 在本文章的第一版中，还遗留了这两个问题：
 * JavaScript Object到底是怎样一个结构
   * 看文中的插图，应该就明白了

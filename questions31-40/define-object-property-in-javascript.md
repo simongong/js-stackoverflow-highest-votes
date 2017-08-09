@@ -8,7 +8,7 @@ Object.defineProperty(player,"health",{get:function() {
 ```
 不解的原因是，他本来就可以直接访问`player.level`，为什么要使用`Object.defineProperty`定义一个属性来做这样的事。他觉得这是多此一举，希望有人给他讲讲这样做有什么理由。
 
-##Object Property
+## Object Property
 
 对于JavaScript变量来说，正常的属性添加通过赋值来创建并显示在属性枚举中（for...in 循环 或 Object.keys 方法）。这种方式添加的属性值可能被改变，也可能会被 删除。该方法允许改变这些额外细节的默认设置。
 ```

@@ -18,7 +18,7 @@
 
 问题很基础，但却非常典型，因为它是一个web程序的最核心流程。对于web程序员来说，是必须要了解的。
 
-###Web请求处理
+## Web请求处理
 典型的web请求是用户在终端浏览器上打开一个url，然后等待一会儿，看到对应的页面内容。
 
 ```
@@ -50,7 +50,7 @@
   * web server将不包含php脚本的a.php返回给客户端，里面只包含html/css/javascript，这样客户端浏览器可以正常解析
 * 客户端浏览器解析a.php中的html/css/javascript代码
 
-###问题解答
+## 问题解答
 我们把原问题对应到上面的数据流，web server端的a.php内容为：
 
 ```
@@ -80,7 +80,7 @@ web server返回给客户端浏览器的a.php的内容为：
 
 在进行web应用编程时，一定要分清楚你的脚本是在什么环境下执行。
 
-###扩展 - Isomorphic JavaScript
+## 扩展 - Isomorphic JavaScript
 SPA(Single-page application)应用曾经火过，但因为众所周知的缺陷，导致后来火又灭了。
 
 作为对SPA的改进，提出了[Isomorphic JavaScript](http://venturebeat.com/2013/11/08/the-future-of-web-apps-is-ready-isomorphic-javascript/)的概念，主要就是不单纯由浏览器完成所有工作，服务器端也同样完成业务逻辑和页面渲染。同时前台后台还能共用代码。

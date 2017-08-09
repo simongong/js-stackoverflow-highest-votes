@@ -4,7 +4,7 @@
 
 也就是URL encode问题。
 
-##为什么要URL encode
+## 为什么要URL encode
 为什么要对查询参数进行encode？因为URL标准规定。参考：[RFC1738 - Uniform Resource Locators (URL) - 2.2](http://www.ietf.org/rfc/rfc1738.txt)。至于URL标准为什么这么规定，从RFC看来可能的理由是：兼容性和安全性。
 
 HTML文档接受的字符集为Unicode。而URL字符串接受的字符范围为ASCII中的一部分：
@@ -15,10 +15,10 @@ HTML文档接受的字符集为Unicode。而URL字符串接受的字符范围为
 
 具体参考这篇文章：[URL Encoding](http://www.blooberry.com/indexdot/html/topics/urlencoding.htm)
 
-##Percent-encoding
+## Percent-encoding
 URL encoding是采用包含百分号的编码形式，也叫做Percent-encoding。看wikipedia，直接了当：[Percent-encoding](http://en.wikipedia.org/wiki/Percent-encoding)
 
-##JavaScript中如何URL encode
+## JavaScript中如何URL encode
 
 * escape()
   * 从ECMAScript3开始已被废弃，别用

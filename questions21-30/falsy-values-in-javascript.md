@@ -3,7 +3,7 @@
 提问者主要是问`null`，以及`null`与`undefined`的区别。延伸一下，可以一起说说JavaScript中的**falsy value**。
 
 
-##Falsy Value
+## Falsy Value
 《JS Definitive Guide》和《JS The Good Parts》中都提到了*falsy value*的概念。falsy value指的是逻辑表达式的结果为假的情况。以下值会被当作falsy value：
 
 * false
@@ -19,7 +19,7 @@
 
 > 对于一个window对象的属性（全局变量），比如window.bar。如果bar未定义在window中，那么使用`if (bar ) { }`会报错。这时候需要使用`if ( typeof bar === 'undefined' )`或者`if ( 'bar' in window )`。
 
-##具体的falsy value
+## 具体的falsy value
 首先要更正原问题提出者的一个错误：**`null`不是一个对象。** 尽管使用`typeof null`会返回`object`，但这是typeof的bug。`null`是一个*primitive value*，它没有其他属性和方法，你也无法给它添加属性和方法。它不是一个对象。
 
 接下来对上述各个falsy value，借用排名第一的答案来做说明。
@@ -48,7 +48,7 @@
 
 * name的值是一个无穷大的数字
 
-##垃圾回收
+## 垃圾回收
 由`falsy value`和`null`，你也许会想到或者曾经听到过，它跟垃圾回收相关。我们就来看看JavaScript的垃圾回收。
 
 跟其他很多种高级语言一样，JavaScript的垃圾回收机制也是采用的[引用计数](http://en.wikipedia.org/wiki/Reference_counting)技术。
@@ -74,7 +74,7 @@ void GC()
 
 JavaScript引擎会定期扫一遍这个图，标记无法到达的节点，然后回收这些节点的内存。GC过程会阻塞正常程序的执行。
 
-###falsy value与垃圾回收
+### falsy value与垃圾回收
 `null && undefined`与垃圾回收有点关系：它销毁目标变量对当前内存的引用。
 
 比如：`var a = new Obj(); var b = a; a = null;`，之后，a变量就不再指向obj那块内存的引用了。但b仍然指向obj那块内存。

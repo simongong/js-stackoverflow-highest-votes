@@ -4,7 +4,7 @@
 
 现在排名第一的答案总结得很精简，我以它来说明。
 
-##传值还是传引用？
+## 传值还是传引用？
 ```
 function changeStuff(num, obj1, obj2)
 {
@@ -24,19 +24,19 @@ console.log(obj2.item);    // unchanged
 
 首先得澄清一下大家常说的传值和传引用。仍然以上面的`changeStuff(num, obj1, obj2)`为例。
 
-###传值
+### 传值
 函数内的num, obj1, obj2都将是一份新的内存，与调用函数之前定义的三个变量毫无关系。函数内无论怎么修改这三个参数，外部定义的三个变量的值始终不变
 
 传值的意思就是：传内存拷贝。
 
-###传引用
+### 传引用
 函数内的num, obj1, obj2都分别指向一块内存，该内存就是调用函数之前定义的三个变量时创建的内存。函数内对这三个参数所做的任何改动，都将反映到外部定义的三个变量上。
 
 传引用的意思就是：传内存指针。
 
 从上面的代码可以看出，JavaScript中函数参数的传递方式既不是传值，也不是传引用，而是叫[call-by-sharing](http://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing)。
 
-##Call-by-sharing
+## Call-by-sharing
 它的意思是：传引用的拷贝。
 
 * `changeStuff()`中的num, obj1, obj2都是一个引用

@@ -26,11 +26,11 @@
   * 为什么delete很慢
   * delete的替代方案
 
-##delete
+## delete
 来看看[`delete`运算符的定义](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#delete)：
 > `delete`运算符用来删除一个对象、一个对象属性或者数组中的某个元素。
 
-####delete语法
+#### delete语法
 示例：
 ```
 delete objectName;
@@ -60,7 +60,7 @@ delete bar; // true
 console.log(typeof bar); // "undefined"
 ```
 
-####delete结果
+#### delete结果
 如果`delete`操作成功，它将会把操作数的值置为`undefined`，然后返回`true`。否则返回`false`。
 
 注意，使用`delete`删除一个数组array的元素i后，array[i]元素就不存在了。
@@ -81,10 +81,10 @@ if (trees[3] || 3 in trees) { // undefined || true
 }
 ```
 
-##谨慎使用delete
+## 谨慎使用delete
 因为`delete`操作的效率很低。
 
-####为什么`delete`很慢
+#### 为什么`delete`很慢
 因为JavaScript语言的动态属性：
 > 可以随时随地向对象添加、删除属性。
 
@@ -101,7 +101,7 @@ V8 hidden class的具体细节，请参考：[Fast Property Access - V8 Design](
 
 而JavaScript的prototype继承机制，使得对象属性的数量很容易就达到较大的数字。因此，尽量避免使用`delete`。
 
-####delete的替代方案
+#### delete的替代方案
 与`delete`类似的方案是`undefined/null`的赋值操作。
 
 根据它们的[性能对比测试](http://jsperf.com/delete-vs-undefined-vs-null/30)可以看出，使用`undefined/null`的赋值操作的效率，是`delete`操作的十倍以上。对于一些计算密集的算法，尤其需要注意。

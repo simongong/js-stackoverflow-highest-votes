@@ -2,7 +2,7 @@
 
 这两个在本质上都是DOM document渲染过程中JavaScript的执行时机问题，`$(document).ready()`是jQuery提供的一个简单JavaScript编程接口。
 
-##客户端JavaScript时间线
+## 客户端JavaScript时间线
 《JS Definitive Guide》的13.3.4小节（[链接1](books.google.com/books?id=6TAODdEIxrgC&pg=PA323&lpg=PA323&dq=javascript+definitive+guide+13.3.4&source=bl&ots=oc8mIRKvRE&sig=aU-EfUoHiTZs2ZKoQMHrH97Ivbc&hl=zh-CN&sa=X&ei=YLFuVLO6Gue4mAXfu4DgCw&redir_esc=y#v=onepage&q=javascript definitive guide 13.3.4&f=false)，[链接2](http://yishouce.com/book/1/27899.html)）已经对这部分内容做了详细的说明了。这里的内容参考自此书内容。
 
 在浏览器解析并渲染DOM的过程中，document对象的readyState属性也随之变化.变化过程：
@@ -15,7 +15,7 @@
   * document.readyState = complete
 * 浏览器开始调用异步事件，以异步响应用户的输入事件、网络事件、计时器过期。
 
-##window.onload
+## window.onload
 `window.onload`是浏览器提供的事件，它要在网页内所有的元素全部加载完毕后才触发，包括图片和flash等。
 
 对应到上面的客户端JavaScript时间线可知，在`document.readyState = complete`之后会触发该事件。

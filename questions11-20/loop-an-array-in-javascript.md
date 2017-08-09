@@ -14,7 +14,7 @@ for(String s : myStringArray)
 * [JavaScript中的for语句](#for-statement)
 * [JavaScript的对象及其属性](#object-and-properties)
 
-##for Statement
+## for Statement
 JavaScript中的`for`语句有两种形式：
 ```
     // for
@@ -36,14 +36,14 @@ JavaScript中的`for`语句有两种形式：
 
 从形式上可以看出，`for...in`是用来*遍历一个对象的所有属性(Properties)*的。
 
-##Object and Properties
+## Object and Properties
 * JavaScript中，除了基本值类型变量之外，其他变量都代表一个对象。
 * 一个JavaScript的对象就是一个JSON实例，是一组属性的集合。
 * 一个JavaScript对象的属性也是变量
 
 因此这是一个递归定义。
 
-###[Object Properties](http://www.w3schools.com/js/js_properties.asp)
+### [Object Properties](http://www.w3schools.com/js/js_properties.asp)
 对于一个对象的属性*(Object Properties)*，我们从其性质和来源两方面来分析。
 
 **性质**：

@@ -17,9 +17,10 @@ function functionTwo() {
 }
 ```
 
-##区别 - hoist
+## 区别 - hoist
+
 尽管平时写代码会随意地把这两种方式混用，但它们在**语义**上还是有区别的。区别的原因就在于JavaScript解释器对程序的解析过程中的一个特性——**hoist**
-> Function declarations and function variables are always moved (‘hoisted’) to the top of their JavaScript scope by the JavaScript interpreter.  
+> Function declarations and function variables are always moved (‘hoisted’) to the top of their JavaScript scope by the JavaScript interpreter.
 -- [JavaScript Scoping and Hoisting](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)
 
 也就是说，functionTwo在被hoist之后是这样的：
@@ -31,7 +32,7 @@ function functionTwo() {
     // Some code
 }
 ```
-这个**hoist**是在解析过程中的**variable instantiation**进行的（这一步是在执行代码run time之前）：所有`var`定义的变量都被初始化为`undefined`，而function declaration定义的函数将被正常初始化。  
+这个**hoist**是在解析过程中的**variable instantiation**进行的（这一步是在执行代码run time之前）：所有`var`定义的变量都被初始化为`undefined`，而function declaration定义的函数将被正常初始化。
 关于解析代码的具体过程的规定，请参考[ECMAScript5 - Executable Code and Execution Contexts](http://es5.github.io/#x10)*（我扫了一遍，与上面那个文章里说的是一致的）。*
 
 有了**hoist**的概念，我们就能理解一个直观的区别——可见性：
@@ -48,13 +49,15 @@ function abc(){}  // yet it is defined down there
 abc(); // works. we can call it again
 ```
 
-##共同点
+## 共同点
+
 尽管在parse time时二者不同，但到了run time它们都是普通的函数引用。
 - 最终在run time的时候，它俩都变成global object的一个*non-deleteable*属性
 - 都可以被重新指向。比如：`functionOne = functionTwo; functionTwo = null;`
 
-##总结
-其实对这两类函数定义方式，我看不出很明显的应用场景的差别。  
+## 总结
+
+其实对这两类函数定义方式，我看不出很明显的应用场景的差别。
 只是从实践经验来看，使用**自执行函数**或者**模块化JavaScript**的方式下：
 
 - 使用functionOne定义公开成员
@@ -66,9 +69,9 @@ var foo = 1;
 function bar() {
   if (!foo) {
     console.log('foo is still falsy');
-    var foo = 10 
+    var foo = 10
   }
-  return foo; 
+  return foo;
 }
 bar(); // 输出10
 ```
@@ -80,9 +83,9 @@ var foo = 1;
 function bar() {
   if (!foo) {
     console.log('foo is still falsy');
-    foo = 10 
+    foo = 10
   }
-  return foo; 
+  return foo;
 }
 bar(); // 输出1
 ```

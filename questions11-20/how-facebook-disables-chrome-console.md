@@ -14,15 +14,15 @@
 * [为什么禁用Chome Console](#why-disable-chrome-console)
 * [如何做到的](#how-to-make-it)
 
-##Why Disable Chrome Console
+## Why Disable Chrome Console
 这是为了防止[special social engineering attack](https://www.facebook.com/photo.php?v=956977232793) _(Facebook链接，需翻墙查看)_
 
-###Social-Engineering Attack
+### Social-Engineering Attack
 上面链接里的视频很好的解释了这个问题。考虑到有些朋友可能打不开那个页面，我在这儿就复述一遍视频里讲的。
 
-####Share Baiting
+#### Share Baiting
 钓鱼分享：做一个网友可能会感兴趣的视频或页面，诱发他分享到Facebook。其实这个分享链接是个钓鱼链接。
-####self-XSS
+#### self-XSS
 他的好友在Facebook上看到了他的这个分享，点击链接后发现需要做一些操作才能查看：
 
 * 点击当前页面地址栏
@@ -33,10 +33,10 @@
 
 [Self-XSS](https://www.facebook.com/help/246962205475854) 又称为跨站脚本攻击，设计用于诱使您泄露 Facebook 帐户访问权限。如果诈骗人获得您帐户的访问权限，他们可以用您的名义发布内容或评论。要避免 Self-XSS 攻击，切勿复制并粘贴可疑链接。
 
-###Why Chrome
+### Why Chrome
 因为Chrome是唯一能受到这种攻击的主流浏览器。IE9/Firefox都能有效防止这类攻击。
 
-###Why disable console
+### Why disable console
 常见的XSS攻击是类似这样：
 ```
 // Normal request URL
@@ -51,7 +51,7 @@ http://host/request?%q=3Cscript src=siteB/evil.js%3E%3Cscript%3E
 
 但考虑到影响范围，Facebook只是选择一部分用户来启动这种应对手段。可能是筛选出可能受到这种攻击的用户。
 
-##How To Make It
+## How To Make It
 前面说了，搞Console的目的是使得恶意脚本无法自执行。
 
 Chome把所有console里的代码都封装成这样来运行：
@@ -61,7 +61,7 @@ with ((console && console._commandLineAPI) || {}) {
 }
 ```
 
-###Command Line API
+### Command Line API
 我们来看看这个`console._commandLineAPI`是什么。
 
 简单的说，就是Chrome为其console提供了若干个接口，你在console里可以直接调用它。比如：`copy() && clear() && profile()`。
