@@ -36,10 +36,10 @@ foo.prototype.bar = function(){};
 
 关于Object.prototype，做以下几点总结：
 
-1. 在浏览器中的实现为__proto__属性，表示为Object.__proto__。它是只读的，你不能修改它；
+1. 在浏览器中的实现为`__proto__`属性，表示为`Object.__proto__`。它是只读的，你不能修改它；
 2. 所有对象都包含这个属性；
-3. 可以使用obj.property直接访问Object.__proto__.property；
-4. `Object.create(obj)`方法返回一个函数对象，这个函数对象的__proto__属性是obj.__proto__的一份复制，同时该函数对象的prototype属性为null。
+3. 可以使用`obj.property`直接访问`Object.__proto__.property`；
+4. `Object.create(obj)`方法返回一个函数对象，这个函数对象的`__proto__`属性是`obj.__proto__`的一份复制，同时该函数对象的prototype属性为null。
 ```
 if (typeof Object.create != 'function') {
   Object.create = (function() {
